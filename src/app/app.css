@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+}
+
+.container{
+    background-color: blanchedalmond;
+    height: calc(100vh - 48px);
+    position: relative;
+}
+.middle-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

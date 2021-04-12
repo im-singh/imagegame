@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  background-color: gold;
+  padding-bottom: 5px;
+}
+header h1 {
+  margin: 0;
+  padding-left: 1rem;
+}
+.links-container {
+  padding-left: 1rem;
+  margin-top: 18px;
+}
+.links-container a {
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+.links-container .active {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #ff1313;
+}
+header .user {
+  margin-left: auto;
+  margin-right: 4%;
+  align-self: center;
+}
+header .user h2 {
+  display: inline-block;
+}

@@ -1,0 +1,35 @@
+.result-box {
+  padding: 10px;
+  min-width: 200px;
+  text-align: center;
+  border: 1px solid #00000047;
+}
+.result-box h2 {
+}
+.result-box hr {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 6px;
+  border: 2px solid #959595;
+}
+.result-box .info {
+  margin-top: 5px;
+}
+.result-box .user-list h4 {
+  text-align: left;
+  padding-left: 5%;
+}
+.result-box .user-list > div {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.result-box .user-list > div p {
+  cursor: default;
+}
+.result-box .user-list .active {
+  background: gold;
+  color: blue;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0px 4px;
+}

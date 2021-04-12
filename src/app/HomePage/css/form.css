@@ -1,0 +1,26 @@
+.form-box{
+    padding: 10px;
+    padding-bottom: 50px;
+    background-color: gold;
+}
+.form-box input{
+    border: 0;
+    padding: 5px 5px 5px 10px;
+}
+.form-box label{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.form-box button{
+    margin-left: 0.5rem;
+    background-color: gray;
+    border:1px solid black;
+    padding: 4px 6px;
+}
+.form-box small{
+    display: block;
+    font-weight: 500;
+    margin-top: 3px;
+    color: #b26767;
+}

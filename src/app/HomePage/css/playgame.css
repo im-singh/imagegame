@@ -1,0 +1,22 @@
+.play-game{
+
+}
+.play-game h2{
+    display: inline-block;
+}
+.play-game button{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    
+}
+.play-game button:hover{
+    background-color: #e4e406fc;
+}
