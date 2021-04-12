@@ -6,3 +6,8 @@ export const showNextImage = (imgObj) => {
     imgObj,
   };
 };
+export const fetchImage = () => {
+  return {
+    type: imageTypes.FETCH_IMAGE,
+  };
+};

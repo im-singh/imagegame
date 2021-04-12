@@ -7,7 +7,7 @@ import { capFirstLtr } from "../Helpers/helper";
 import "./css/playgame.css";
 function PlayGame({ isShow, history }) {
   const currentUser = useSelector(({ userState }) => userState.currentUser);
-  console.log("user: ", currentUser);
+  // console.log("user: ", currentUser);
   const dispatch = useDispatch();
 
   const handlePlayBtn = () => {

@@ -8,16 +8,16 @@ import ImageBox from "./ImageBox";
 
 function RandomPage({ history }) {
   const currentUser = useSelector(({ userState }) => userState.currentUser);
-  const isFinished = useSelector(({ gameState }) => gameState.isFinished);
-
+  const { isFinished, isPlaying } = useSelector(({ gameState }) => gameState);
   useEffect(() => {
-    if (isFinished || !currentUser) {
+    if (isFinished || !isPlaying) {
       history.push("/");
     }
   }, [isFinished]);
 
   return (
-    !isFinished && (
+    !isFinished &&
+    isPlaying && (
       <div className="container">
         <div className="middle-container">
           <div>

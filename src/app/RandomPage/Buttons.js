@@ -6,6 +6,7 @@ import { showNextImage } from "../../redux/Images/actionCreators";
 
 function Buttons({ history }) {
   const dispatch = useDispatch();
+  const imageUrl = useSelector(({ imageState }) => imageState.imageUrl);
 
   const [isLike, setIsLike] = useState("");
 
@@ -29,6 +30,7 @@ function Buttons({ history }) {
     return {
       like: isLike === "yes",
       dislike: isLike === "no",
+      imageUrl,
     };
   };
   return (
