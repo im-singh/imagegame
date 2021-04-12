@@ -1,5 +1,5 @@
-export const finishUser = (state) => {
+export const finishUser = (state, action) => {
   let userObj = { ...state.currentUser };
-  userObj.images = [...state.images];
+  userObj.images = [...state.images, action.imgObj];
   return userObj;
 };

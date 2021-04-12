@@ -27,14 +27,17 @@ export default function userReducer(state = userState, action) {
     case gameTypes.FINISH:
       return {
         ...state,
-        users: [...state.users, finishUser(state)],
+        users: [...state.users, finishUser(state, action)],
+        imageCount: state.imageCount + 1,
+        likes: action.imgObj.like ? state.likes + 1 : state.likes,
+        dislikes: action.imgObj.dislike ? state.dislikes + 1 : state.dislikes,
         images: [],
       };
     case imageTypes.SHOW_NEXT_IMG:
       return {
         ...state,
-        imageCount: state.imageCount + 1,
         images: [...state.images, action.imgObj],
+        imageCount: state.imageCount + 1,
         likes: action.imgObj.like ? state.likes + 1 : state.likes,
         dislikes: action.imgObj.dislike ? state.dislikes + 1 : state.dislikes,
       };

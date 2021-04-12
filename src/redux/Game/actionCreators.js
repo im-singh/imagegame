@@ -5,8 +5,9 @@ export const startGame = () => {
     type: gameTypes.START,
   };
 };
-export const FinishGame = () => {
+export const FinishGame = (imgObj) => {
   return {
     type: gameTypes.FINISH,
+    imgObj,
   };
 };
