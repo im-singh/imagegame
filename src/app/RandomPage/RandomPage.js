@@ -18,7 +18,7 @@ function RandomPage({ history }) {
   return (
     !isFinished &&
     isPlaying && (
-      <div className="container">
+      <div className="container" data-testid="random-page">
         <div className="middle-container">
           <div>
             <ImageBox />

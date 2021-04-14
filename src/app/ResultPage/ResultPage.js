@@ -11,7 +11,7 @@ function ResultPage() {
   );
 
   return (
-    <div className="container">
+    <div className="container" data-testid="result-page">
       <div className="middle-container">
         <div className="result-box">
           <h2>Result !</h2>

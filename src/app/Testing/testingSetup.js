@@ -2,10 +2,12 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
+import { createMemoryHistory } from "history";
 
 import store from "../../redux/store";
 
 const AllTheProviders = ({ children }) => {
+  const history = createMemoryHistory();
   return (
     <Router>
       <Provider store={store}>{children}</Provider>

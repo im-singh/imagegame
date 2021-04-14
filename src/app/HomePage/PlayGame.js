@@ -16,7 +16,7 @@ function PlayGame({ isShow, history }) {
   };
   return (
     isShow && (
-      <div className="play-game">
+      <div className="play-game" data-testid="play-game">
         <p>
           <strong>Hi, </strong>
           <h2>{capFirstLtr(currentUser?.name)}</h2>

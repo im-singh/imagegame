@@ -9,7 +9,7 @@ import ResultPage from "./ResultPage/ResultPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-testid="app">
       <Header />
       <Switch>
         <Route path="/random-image" component={RandomImage} />

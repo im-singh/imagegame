@@ -11,7 +11,7 @@ function HomePage() {
   const isFinished = useSelector(({ gameState }) => gameState.isFinished);
 
   return (
-    <div className="container">
+    <div className="container" data-testid="home-page">
       <div className="middle-container">
         <FormComponent isShow={currentUser === null || isFinished} />
         <PlayGame isShow={currentUser !== null && !isFinished} />
