@@ -7,7 +7,7 @@ import userReducer from "./Users/reducer";
 import imageReducer from "./Images/reducer";
 import mysaga from "./Saga/saga";
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   imageState: imageReducer,
   userState: userReducer,
   gameState: gameReducer,

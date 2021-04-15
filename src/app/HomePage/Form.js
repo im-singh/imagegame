@@ -26,6 +26,7 @@ function Form({ isShow }) {
         <label htmlFor="email">Email : </label>
         <input
           type="email"
+          id="email"
           placeholder="email"
           required
           value={email}

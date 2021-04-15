@@ -20,7 +20,7 @@ function User({ location }) {
       <div className="user">
         User:{" "}
         <h2>
-          <storng>{capFirstLtr(currentUser?.name)}</storng>
+          <strong>{capFirstLtr(currentUser?.name)}</strong>
         </h2>
       </div>
     )

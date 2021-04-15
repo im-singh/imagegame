@@ -1,25 +1,29 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { createStore } from 'redux';
+import { render as rtlRender } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 
-import store from "../../redux/store";
+import { rootReducer } from "../../redux/store";
 
-const AllTheProviders = ({ children }) => {
-  const history = createMemoryHistory();
-  return (
-    <Router>
+function render(
+  ui,
+  {
+    initialState,
+    store = createStore(rootReducer, initialState),
+    ...renderOptions
+  } = {}
+) {
+  function Wrapper({ children }) {
+    return <Router>
       <Provider store={store}>{children}</Provider>
     </Router>
-  );
-};
-
-const customRender = (ui, options) =>
-  render(ui, { wrapper: AllTheProviders, ...options });
-
+  }
+  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
+}
 // re-export everything
 export * from "@testing-library/react";
 
 // override render method
-export { customRender as render };
+export { render };
