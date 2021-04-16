@@ -17,10 +17,12 @@ function PlayGame({ isShow, history }) {
   return (
     isShow && (
       <div className="play-game" data-testid="play-game">
+        <strong>Hi, </strong>
+        <h2>{capFirstLtr(currentUser?.name)}</h2>
         <p>
-          <strong>Hi, </strong>
-          <h2>{capFirstLtr(currentUser?.name)}</h2>
-          <button onClick={handlePlayBtn}>Play Game</button>
+          <button onClick={handlePlayBtn}>
+            Play Game
+          </button>
         </p>
       </div>
     )

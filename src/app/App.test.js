@@ -6,7 +6,7 @@ describe("<App/>: ", () => {
     let { container } = render(<App />);
     let app = screen.getByTestId("app");
 
-    expect(app).toBeInTheDocument("div");
+    expect(app).toBeInTheDocument();
     expect(container).toBeInTheDocument();
   });
 

@@ -17,7 +17,7 @@ function RandomPage({ history }) {
 
   return (
     !isFinished &&
-    isPlaying && (
+      isPlaying ? (
       <div className="container" data-testid="random-page">
         <div className="middle-container">
           <div>
@@ -27,6 +27,7 @@ function RandomPage({ history }) {
         </div>
       </div>
     )
+      : null
   );
 }
 
