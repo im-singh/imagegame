@@ -15,20 +15,18 @@ function RandomPage({ history }) {
     }
   }, [isFinished]);
 
-  return (
-    !isFinished &&
-      isPlaying ? (
-      <div className="container" data-testid="random-page">
-        <div className="middle-container">
-          <div>
-            <ImageBox />
-            <Buttons />
-          </div>
+
+  return !isFinished && isPlaying ? (
+    <div className="container" data-testid="random-page">
+      <div className="middle-container">
+        <div>
+          <ImageBox />
+          <Buttons />
         </div>
       </div>
-    )
-      : null
-  );
+    </div>
+  )
+    : null;
 }
 
 export default withRouter(RandomPage);

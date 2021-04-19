@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { setCurrentUser } from "../../redux/Users/actionCreators";
-
+import { capFirstLtr } from '../Helpers/helper'
 function UserLists() {
   const { users, currentUser } = useSelector(({ userState }) => userState);
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ function UserLists() {
     dispatch(setCurrentUser(data));
   };
 
-  const retrunUsers = () => {
+  const reverseUsers = () => {
     let m = [...users];
     m.reverse();
     return m;
@@ -28,10 +28,10 @@ function UserLists() {
     <div className="user-list">
       <h4>Finished Users: </h4>
       <div>
-        {retrunUsers().map((ele) => {
+        {reverseUsers().map((ele, idx) => {
           return (
-            <p className={returnClass(ele)} onClick={() => changeUser(ele)}>
-              {ele.name}
+            <p key={idx} className={returnClass(ele)} onClick={() => changeUser(ele)}>
+              {capFirstLtr(ele.name)}
             </p>
           );
         })}

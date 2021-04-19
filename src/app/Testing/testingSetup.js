@@ -1,9 +1,9 @@
 import React from "react";
 import { createStore } from 'redux';
 import { render as rtlRender } from "@testing-library/react";
-import { Provider } from "react-redux";
+import { Provider as ReduxProvider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
-import { createMemoryHistory } from "history";
+// import { createMemoryHistory } from "history";
 
 import { rootReducer } from "../../redux/store";
 
@@ -17,10 +17,11 @@ function render(
 ) {
   function Wrapper({ children }) {
     return <Router>
-      <Provider store={store}>{children}</Provider>
+      <ReduxProvider store={store}>{children}</ReduxProvider>
     </Router>
   }
-  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
+  let rendered = rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
+  return { ...rendered, store };
 }
 // re-export everything
 export * from "@testing-library/react";

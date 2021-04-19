@@ -32,7 +32,7 @@ describe("<Header/>", () => {
             // expect(activeLink.href).toBe(window.location.href);
             let links = screen.getAllByRole("link");
             fireEvent.click(links[index]);
-            expect(links[index].href).toBe(window.location.href);
+            expect(links[index].pathname).toBe(window.location.pathname);
             expect(links[index].className).toBe('active');
         });
 })
@@ -53,6 +53,7 @@ describe('<Header/> with state', () => {
         //go to /result page
         fireEvent.click(links[2]);
         expect(window.location.pathname).toBe("/result");
+
         expect(screen.getByText(/user:/i)).toBeInTheDocument();
         let h2 = container.querySelector("h2");
         expect(h2.textContent.toLowerCase()).toBe(userFinishedState.userState.currentUser.name);

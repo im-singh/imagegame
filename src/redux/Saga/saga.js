@@ -5,8 +5,8 @@ import imageTypes from "../Images/types";
 // worker Saga: will be fired on FETCH_IMAGE actions
 function* fetchImage(action) {
   try {
-    const imgUrl = yield call(getRandomImage);
-    yield put({ type: imageTypes.FETCH_IMAGE_SUCCESS, imgUrl });
+    const resObj = yield call(getRandomImage);
+    yield put({ type: imageTypes.FETCH_IMAGE_SUCCESS, imgUrl: resObj.imgUrl });
   } catch (e) {
     yield put({ type: imageTypes.FETCH_IMAGE_FAIL, message: e.message });
   }

@@ -8,7 +8,8 @@ export const getRandomImage = () => {
       .get(url)
       .then((r) => {
         console.log("r: ", r);
-        resolve(r.data.urls.small);
+        let imgUrl=r.data.urls.small
+        resolve({imgUrl});
       })
       .catch((err) => {
         reject(err);
