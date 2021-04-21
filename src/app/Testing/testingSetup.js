@@ -1,5 +1,6 @@
 import React from "react";
 import { createStore } from 'redux';
+// import 'jest-dom/extend-expect';
 import { render as rtlRender } from "@testing-library/react";
 import { Provider as ReduxProvider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";

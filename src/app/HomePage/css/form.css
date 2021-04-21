@@ -24,3 +24,10 @@
     margin-top: 3px;
     color: #b26767;
 }
+@media screen and (max-width: 534px) {
+    .form-box button{
+        margin-left: 0;
+        display: block;
+        margin-top: 0.4rem;
+    }
+}
